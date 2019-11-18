@@ -1,0 +1,1 @@
+export const RESTCountriesURL = 'https://restcountries.eu/rest/v2/';
