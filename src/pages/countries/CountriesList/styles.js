@@ -16,15 +16,13 @@ export const StyledContainer = styled(Container)`
 `
 
 export const StyledUl = styled('ul')`
-    &&&{
-        padding: 20px;
-        max-height: 280px;
-        overflow: scroll;
-        width: 80%;
-        list-style: none;
-        margin: auto;
-        box-shadow: -7px 9px 11px -7px rgba(0,0,0,0.65);
-    }
+    padding: 20px;
+    max-height: 280px;
+    overflow-y: scroll;
+    width: 80%;
+    list-style: none;
+    margin: auto;
+    box-shadow: -7px 9px 11px -7px rgba(0,0,0,0.65);
 `
 
 export const StyledTitle = styled('p')`

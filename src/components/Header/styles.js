@@ -1,11 +1,12 @@
 import styled from 'styled-components'
 import { Navbar } from 'react-bootstrap'
+import { NavLink } from 'react-router-dom'
 import { ReactComponent as Globe } from 'assets/icons/globe.svg'
 
 export const StyledHeader = styled('header')`
     font-family: 'OpenSans' !important;
 `
-export const StyledBrand = styled(Navbar.Brand)`
+export const StyledBrand = styled(NavLink)`
     &&&{
         font-size: ${({theme}) => theme.fontSizes.large};
         display: flex;
@@ -13,13 +14,13 @@ export const StyledBrand = styled(Navbar.Brand)`
         align-items: center;
         text-decoration: none;
         text-transform: capitalize;
-        opacity: 0.9;
         transition: .3s all ease-in;
         cursor: pointer;
+        color: rgba(255,255,255,0.8);
 
         &:hover {
             transform: scale(1.01);
-            opacity: 1;
+            color: rgba(255,255,255,1);
         }
     }
 `

@@ -13,7 +13,7 @@ import {
 const Header = () => (
     <StyledHeader>
         <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-            <StyledBrand href="/">
+            <StyledBrand to={'/'}>
                 <StyledGlobeIcon />
                 <StyledBrandText>
                     <StyledUppercaseWord>rest</StyledUppercaseWord> countries

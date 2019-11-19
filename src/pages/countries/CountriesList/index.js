@@ -1,21 +1,28 @@
 import React, { useState, useEffect, Fragment } from 'react'
 import PropTypes from 'prop-types'
-import { compareAbc, compareDesc, sortOptions } from 'utils/helpers'
-import { StyledContainer, StyledUl, StyledButton, StyledTitle, StyledCol } from './styles'
 import { Row, Col } from 'react-bootstrap'
+
+import { compareAbc, compareDesc, sortOptions } from 'utils/helpers'
+import {
+    StyledContainer,
+    StyledUl,
+    StyledButton,
+    StyledTitle,
+    StyledCol
+} from './styles'
 import CategoriesItem from '../CountriesItem'
 
 const CountriesList = ({countriesList, setSelectedCounty}) => {
-    
+
     const [filteredCountriesList, setFilteredCountriesList] = useState(null);
     const [nameSortType, setNameSortType] = useState(sortOptions.abc);
     const [populationSortType, setPopulationSortType] = useState(sortOptions.abc);
 
-    
+
     useEffect(() => {
         setFilteredCountriesList(countriesList)
         // eslint-disable-next-line
-    }, []) 
+    }, [])
 
     const filterByName = (option) => {
         if (option === sortOptions.abc) {
@@ -43,7 +50,7 @@ const CountriesList = ({countriesList, setSelectedCounty}) => {
                 <StyledContainer>
                     <Row>
                         <StyledCol xs={{span: 6, offset: 3}}>
-                            <StyledButton 
+                            <StyledButton
                                 color={'red'}
                                 onClick={() => filterByName(nameSortType)}
                             >Sort by name ({nameSortType})
@@ -61,7 +68,7 @@ const CountriesList = ({countriesList, setSelectedCounty}) => {
                         </StyledCol>
                         <Col xs={12}>
                             <StyledUl>
-                                {filteredCountriesList.map(({name, population, flag}) => 
+                                {filteredCountriesList.map(({name, population, flag}) =>
                                     <CategoriesItem
                                         key={name}
                                         name={name}
